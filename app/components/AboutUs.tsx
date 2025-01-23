@@ -38,10 +38,10 @@ export default function AboutUs() {
           >
             <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
             <p className="text-gray-300 mb-6">
-              At The Hawk Fit Hub, we're committed to helping you achieve your
-              fitness goals and lead a healthier lifestyle. Our state-of-the-art
-              facility and expert trainers are here to support you every step of
-              the way.
+              At The Hawk Fit Hub, we&#39;re committed to helping you achieve
+              your fitness goals and lead a healthier lifestyle. Our
+              state-of-the-art facility and expert trainers are here to support
+              you every step of the way.
             </p>
             <h3 className="text-2xl font-semibold mb-4">Why Choose Us?</h3>
             <ul className="list-disc list-inside text-gray-300">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui/input";
@@ -17,14 +17,14 @@ import {
 
 export default function RegistrationForm() {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  //const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     name: "",
     age: "",
     gender: "",
     height: "",
     weight: "",
-    plan: searchParams.get("plan") || "",
+    //  plan: searchParams.get("plan") || "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -130,8 +130,8 @@ export default function RegistrationForm() {
           <Label htmlFor="plan">Membership Plan</Label>
           <Select
             name="plan"
-            value={formData.plan}
-            onValueChange={(value) => setFormData({ ...formData, plan: value })}
+            //  value={formData.plan}
+            //  onValueChange={(value) => setFormData({ ...formData, plan: value })}
           >
             <SelectTrigger>
               <SelectValue placeholder="Select a plan" />
