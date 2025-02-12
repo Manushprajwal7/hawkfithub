@@ -14,8 +14,8 @@ import Link from "next/link";
 
 const plans = [
   {
-    name: "3 Months",
-    price: 4999,
+    name: "3 Months + 1 Month Free",
+    price: 3499,
     features: [
       "Access to gym equipment",
       "Locker room access",
@@ -23,8 +23,8 @@ const plans = [
     ],
   },
   {
-    name: "6 Months",
-    price: 8999,
+    name: "6 Months + 2 Months Free",
+    price: 5499,
     features: [
       "All 3 Months features",
       "2 group classes per week",
@@ -32,8 +32,8 @@ const plans = [
     ],
   },
   {
-    name: "12 Months",
-    price: 15999,
+    name: "12 Months + 3 Months Free",
+    price: 6999,
     features: [
       "All 6 Months features",
       "Unlimited group classes",

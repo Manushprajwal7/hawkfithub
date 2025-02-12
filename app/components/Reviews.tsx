@@ -12,19 +12,19 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "Abhishek .",
+    name: " Vino Theya",
     rating: 5,
-    text: "The Hawk Fit Hub has transformed my fitness journey. The trainers are exceptional!",
+    text: "This gym has been an amazing experience for me. The trainers are approachable and genuinely care about your progress. The atmosphere is warm and inviting, making it feel less like a gym and more like a family. It’s a place where you feel motivated and supported every step of the way",
   },
   {
-    name: "Rakshith R.",
-    rating: 4,
-    text: "Great variety of classes and top-notch equipment. Highly recommended!",
+    name: " Sarath Ak",
+    rating: 5,
+    text: "This gym offers a fantastic atmosphere for achieving your fitness goals. The equipment is modern and well-maintained, making workouts enjoyable. The staff is friendly and always available to provide assistance or guidance. Cleanliness is a clear priority, ensuring a comfortable experience for all members. Overall, I highly recommend this gym for anyone seeking a positive and productive workout environment.Thanks THE HAWK FIT HUB",
   },
   {
-    name: "Joseph J Mathew .",
+    name: "Alan sibi",
     rating: 5,
-    text: "The community here is amazing. I've made great friends and achieved my fitness goals.",
+    text: "Very nice gym for beginners and very helpful trainers and people around you. They can bring the best out of u.",
   },
 ];
 

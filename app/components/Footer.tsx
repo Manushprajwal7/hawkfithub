@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -15,7 +15,9 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <h3 className="text-xl font-bold">The Hawk Fit Hub</h3>
-            <p className="text-gray-400">Transform Your Body, Elevate Your Mind</p>
+            <p className="text-gray-400">
+              Transform Your Body, Elevate Your Mind
+            </p>
           </motion.div>
           <motion.div
             className="flex space-x-4"
@@ -23,13 +25,22 @@ export default function Footer() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
               <Facebook className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a
+              href="https://www.instagram.com/the_hawk_fit_hub/"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
               <Instagram className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a
+              href="#"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
               <Twitter className="w-6 h-6" />
             </a>
           </motion.div>
@@ -40,10 +51,10 @@ export default function Footer() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          &copy; {new Date().getFullYear()} The Hawk Fit Hub. All rights reserved.
+          &copy; {new Date().getFullYear()} The Hawk Fit Hub. All rights
+          reserved.
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }
-

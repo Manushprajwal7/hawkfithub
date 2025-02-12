@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/app/components/ui/button";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Hero() {
   return (
     <section
@@ -37,9 +37,11 @@ export default function Hero() {
           <p className="text-xl md:text-2xl mb-8">
             Transform Your Body, Elevate Your Mind
           </p>
-          <Button size="lg" className="text-lg px-8 py-6">
-            Join Us Now
-          </Button>
+          <Link href="/register">
+            <Button size="lg" className="text-lg px-8 py-6">
+              Join Us Now
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>
