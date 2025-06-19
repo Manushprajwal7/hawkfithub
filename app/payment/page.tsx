@@ -1,16 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import QRCode from "react-qr-code";
 
-export default function PaymentPage() {
+function PaymentContent() {
   const searchParams = useSearchParams();
   const planKey = searchParams.get("plan") || "3month";
   const [paymentUrl, setPaymentUrl] = useState("");
   const [isMobile, setIsMobile] = useState(false);
 
-  const upiId = "9844775528@ybl";
+  const upiId = "";
   const gymName = "THE HAWK FIT HUB";
 
   const plans: Record<
@@ -48,7 +48,7 @@ export default function PaymentPage() {
 
     setPaymentUrl(upiLink);
     setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
-  }, [planKey]);
+  }, [planKey, selectedPlan.label, selectedPlan.price]);
 
   return (
     <div className="min-h-screen bg-black flex items-center justify-center px-4 py-20">
@@ -85,5 +85,19 @@ export default function PaymentPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function PaymentPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-black flex items-center justify-center">
+          Loading...
+        </div>
+      }
+    >
+      <PaymentContent />
+    </Suspense>
   );
 }

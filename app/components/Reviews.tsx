@@ -22,9 +22,9 @@ const reviews = [
     text: "This gym offers a fantastic atmosphere for achieving your fitness goals. The equipment is modern and well-maintained, making workouts enjoyable. The staff is friendly and always available to provide assistance or guidance. Cleanliness is a clear priority, ensuring a comfortable experience for all members. Overall, I highly recommend this gym for anyone seeking a positive and productive workout environment.Thanks THE HAWK FIT HUB",
   },
   {
-    name: "Alan sibi",
+    name: "Nithesh",
     rating: 5,
-    text: "Very nice gym for beginners and very helpful trainers and people around you. They can bring the best out of u.",
+    text: "This gym is fantastic! The equipment is well-maintained, the trainers are knowledgeable and always ready to help, and the atmosphere is very motivating. The place is clean, spacious, and has a great selection of machines and weights. Highly recommend for anyone serious about fitness",
   },
 ];
 
@@ -108,7 +108,7 @@ export default function Reviews() {
                   />
 
                   {/* Overlay with gym name */}
-                  <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-2 rounded-lg backdrop-blur-sm">
+                  <div className="absolute top-4 right-3 bg-black/70 text-white px-3 py-2 rounded-lg backdrop-blur-sm">
                     <p className="font-semibold text-sm">📍 The Hawk Fit Hub</p>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export default function Reviews() {
           <div className="order-1 lg:order-2 space-y-6">
             <Card className="bg-gray-800 border-gray-700">
               <CardHeader>
-                <CardTitle className="text-white text-xl flex items-center gap-2">
+                <CardTitle className="text-white text-xl flex items-center gap-20">
                   📍 Gym Location
                 </CardTitle>
               </CardHeader>
