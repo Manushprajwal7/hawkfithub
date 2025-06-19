@@ -1,33 +1,89 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import QRCode from "react-qr-code";
 
 export default function PaymentPage() {
+  const searchParams = useSearchParams();
+  const planKey = searchParams.get("plan") || "3month";
   const [paymentUrl, setPaymentUrl] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+
+  const upiId = "9844775528@ybl";
+  const gymName = "THE HAWK FIT HUB";
+
+  const plans: Record<
+    string,
+    { label: string; price: number; description: string }
+  > = {
+    "3month": {
+      label: "3 Months + 1 Month Free",
+      price: 3499,
+      description: "Access to gym equipment, locker room & free weights",
+    },
+    "6month": {
+      label: "6 Months + 2 Months Free",
+      price: 5499,
+      description:
+        "All 3 Month features + 2 group classes/week + personalized workout",
+    },
+    "12month": {
+      label: "12 Months + 3 Months Free",
+      price: 6999,
+      description:
+        "All 6 Month features + unlimited group classes + 2 PT/month + nutrition",
+    },
+  };
+
+  const selectedPlan = plans[planKey] || plans["3month"];
 
   useEffect(() => {
-    // In a real application, you would generate this URL dynamically
-    // based on the user's selected plan and registration details
-    setPaymentUrl("https://example.com/pay/12345");
-  }, []);
+    const txnId = `txn_${Date.now()}`;
+    const upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(
+      gymName
+    )}&mc=0000&tid=${txnId}&tr=${txnId}&tn=${encodeURIComponent(
+      selectedPlan.label
+    )}&am=${selectedPlan.price}&cu=INR`;
+
+    setPaymentUrl(upiLink);
+    setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
+  }, [planKey]);
 
   return (
-    <div className="container mx-auto px-4 py-20 text-center">
-      <h1 className="text-4xl font-bold mb-10">Complete Your Payment</h1>
-      <p className="mb-6">Scan the QR code below to complete your payment:</p>
-      <div className="flex justify-center">
-        <a
-          href={paymentUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 underline"
-        >
-          {paymentUrl}
-        </a>
+    <div className="min-h-screen bg-black flex items-center justify-center px-4 py-20">
+      <div className="text-center text-white max-w-xl w-full">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
+          Complete Your Payment
+        </h1>
+
+        <h2 className="text-2xl font-semibold mb-1">{selectedPlan.label}</h2>
+        <p className="text-sm text-gray-300 mb-3">{selectedPlan.description}</p>
+        <p className="text-2xl font-bold text-green-400 mb-10">
+          ₹{selectedPlan.price}
+        </p>
+
+        {isMobile ? (
+          <a
+            href={paymentUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition duration-200 inline-block"
+          >
+            Pay with UPI
+          </a>
+        ) : (
+          <div className="mt-4 flex flex-col items-center space-y-4">
+            <p className="text-base font-medium">Scan this QR code to pay:</p>
+            <div className="bg-white p-4 rounded-xl shadow-lg">
+              <QRCode value={paymentUrl} size={180} />
+            </div>
+            <p className="text-xs text-gray-300 italic">
+              Use GPay, PhonePe, Paytm, or any UPI-enabled app.
+            </p>
+          </div>
+        )}
       </div>
-      <p className="mt-6">
-        After scanning, you will be redirected to complete the payment process.
-      </p>
     </div>
   );
 }
