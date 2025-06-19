@@ -14,31 +14,29 @@ import Link from "next/link";
 
 const plans = [
   {
-    name: "3 Months + 1 Month Free",
+    name: "3 Months ",
     price: 3499,
-    features: [
-      "Access to gym equipment",
-      "Locker room access",
-      "Free weights area",
-    ],
+    features: ["Access to All gym equipment", "Free weights area"],
   },
   {
-    name: "6 Months + 2 Months Free",
+    name: "6 Months ",
     price: 5499,
     features: [
       "All 3 Months features",
-      "2 group classes per week",
+      "2 group classes per month",
       "Personalized workout plan",
     ],
   },
   {
-    name: "12 Months + 3 Months Free",
+    name: "12 Months ",
     price: 6999,
     features: [
       "All 6 Months features",
-      "Unlimited group classes",
-      "2 personal training sessions/month",
+      "Nutrition plan",
+      "2 personal training sessions per Week",
       "Nutrition consultation",
+      "High Intensity Interval Training (HIIT)",
+      "Zumba classes",
     ],
   },
 ];

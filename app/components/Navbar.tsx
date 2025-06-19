@@ -120,7 +120,10 @@ export default function Navbar() {
             </a>
           ))}
           <Link href="/register" className="block">
-            <Button className="w-full" variant="secondary">
+            <Button
+              className="w-full bg-gray-900 hover:bg-gray-800 font-bold text-amber-400 hover:text-amber-300"
+              variant="secondary"
+            >
               Join Us
             </Button>
           </Link>

@@ -18,18 +18,18 @@ function PaymentContent() {
     { label: string; price: number; description: string }
   > = {
     "3month": {
-      label: "3 Months + 1 Month Free",
+      label: "3 Months ",
       price: 3499,
       description: "Access to gym equipment, locker room & free weights",
     },
     "6month": {
-      label: "6 Months + 2 Months Free",
+      label: "6 Months ",
       price: 5499,
       description:
         "All 3 Month features + 2 group classes/week + personalized workout",
     },
     "12month": {
-      label: "12 Months + 3 Months Free",
+      label: "12 Months ",
       price: 6999,
       description:
         "All 6 Month features + unlimited group classes + 2 PT/month + nutrition",

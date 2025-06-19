@@ -17,7 +17,7 @@ const services = [
   },
   {
     icon: Users,
-    title: "Expert Trainers",
+    title: "Expert Male and Female Trainers",
     description: "Personalized guidance from certified fitness professionals",
   },
   {

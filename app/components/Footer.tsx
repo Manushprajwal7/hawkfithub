@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -26,22 +26,10 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <a
-              href="#"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <Facebook className="w-6 h-6" />
-            </a>
-            <a
               href="https://www.instagram.com/the_hawk_fit_hub/"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Instagram className="w-6 h-6" />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <Twitter className="w-6 h-6" />
             </a>
           </motion.div>
         </div>
