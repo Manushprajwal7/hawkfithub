@@ -10,7 +10,7 @@ function PaymentContent() {
   const [paymentUrl, setPaymentUrl] = useState("");
   const [isMobile, setIsMobile] = useState(false);
 
-  const upiId = "";
+  const upiId = "8975719470-2@ybl";
   const gymName = "THE HAWK FIT HUB";
 
   const plans: Record<
