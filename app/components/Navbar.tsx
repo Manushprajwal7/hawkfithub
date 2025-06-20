@@ -81,9 +81,12 @@ export default function Navbar() {
               {item}
             </motion.a>
           ))}
-          <Link href="/register">
-            <Button variant="secondary">Join Us</Button>
-          </Link>
+          <Button
+            className="w-full bg-gray-900 hover:bg-gray-800 font-bold text-amber-400 hover:text-amber-300"
+            variant="secondary"
+          >
+            Join Us
+          </Button>
         </div>
         <div className="md:hidden">
           <Button
