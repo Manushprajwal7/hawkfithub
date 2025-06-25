@@ -18,19 +18,19 @@ const trainers = [
     image: "/trainers/strength-trainer.jpg",
   },
   {
-    name: "Sinu Mathew",
+    name: "Rashmi PB",
     specialty: "HIIT & Functional Training",
     bio: "ACE-certified trainer with expertise in high-intensity interval training and metabolic conditioning. Creates challenging yet scalable workouts for all fitness levels.",
     image: "/trainers/hiit-trainer.jpg",
   },
   {
-    name: "Sinu Mathew",
+    name: "Boobesh",
     specialty: "Physiotherapy",
     bio: "Licensed physiotherapist with 8 years of clinical experience. Specializes in post-rehabilitation training, mobility improvement, and pain management techniques.",
     image: "/trainers/physio-trainer.jpg",
   },
   {
-    name: "Sinu Mathew",
+    name: "Aswathy Rejith",
     specialty: "Nutrition & Wellness",
     bio: "Registered dietitian and certified nutrition specialist. Develops personalized meal plans that complement fitness goals while promoting sustainable lifestyle changes.",
     image: "/trainers/nutrition-trainer.jpg",
