@@ -4,7 +4,6 @@ import Services from "./components/Services";
 import Pricing from "./components/Pricing";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
-import TrainersList from "./components/TrainersList";
 import ClassesList from "./components/ClassesList";
 export default function Home() {
   return (
@@ -12,7 +11,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
-      <TrainersList />
       <ClassesList />
       <Pricing />
       <Reviews />
